@@ -1,0 +1,107 @@
+﻿title: BartenderDialogue
+---
+Bartender: Hey there! Welcome to the club. What brings you here tonight? #line:bar1
+<<playAudio "welcome">>
+-> "Just here to relax."
+    Bartender: A good choice! This is the best place to unwind after a long day.#line:bar2
+    <<playAudio "relax">>
+    Bartender: What do you do to relax?  #line:bar3
+    -> "Listen to music."
+        Bartender: You're in luck! Our DJ has a killer set lined up tonight.  #line:bar4
+        <<playAudio "listen_to_music">>
+    -> "Dance the night away."
+        Bartender: The dance floor is heating up! You should check it out.#line:bar5
+        <<playAudio "dance">>
+    -> "Hang out with friends."
+        Bartender: Nothing beats good company and good drinks.#line:bar6
+        <<playAudio "hang_out_with_friends">>
+-> "Looking for a fun night!"
+    Bartender: You've come to the right place! The vibe here is all about fun.  #line:bar7
+    <<playAudio "fun">>
+    Bartender: What’s your idea of a fun night?  #line:bar8
+    -> "Great music and dancing."
+        Bartender: The DJ's on fire tonight! The dance floor is the place to be.#line:bar9
+        <<playAudio "great_music_and_dancing">>
+    -> "Chilling with a drink."
+        Bartender: We've got the best cocktails in town. Ready to order?#line:bar10
+        <<playAudio "chilling_with_drink">>
+    -> "Meeting new people."
+        Bartender: People here are super friendly. Just head over to the lounge!#line:bar11
+        <<playAudio "meeting_new_people">>
+-> "Trying out the drinks here."
+    Bartender: That’s music to my ears! Our drinks are top-notch.#line:bar12
+    <<playAudio "trying_out_drinks">>
+    Bartender: You’ve got to try one of our specials tonight.#line:bar13
+    <<playAudio "special_drinks">>
+
+Bartender: So, what can I get you to drink?#line:bar14
+<<playAudio "get_you_a_drink">>
+-> "A beer, please."
+    <<playAudio "beer">>
+    Bartender: A classic choice! One cold beer coming up.#line:bar15
+-> "A cocktail would be great."
+    <<playAudio "cocktail">>
+    Bartender: Excellent taste. Our bartender’s special cocktail is on its way!#line:bar16
+-> "Just water for me, thanks."
+    <<playAudio "water">>
+    Bartender: Staying hydrated? Smart choice. Here’s some refreshing water.#line:bar17
+
+Bartender: Anything else I can do for you tonight?#line:bar18
+<<playAudio "anything_else">>
+-> "That’s all for now, thanks!"
+    <<playAudio "thanks">>
+    Bartender: Enjoy your night! Let me know if you need anything.#line:bar19
+-> "Can you recommend something else?"
+    <<playAudio "recommend">>
+    Bartender: If you’re up for a surprise, I’d suggest trying our signature shooter.#line:bar20
+    Bartender: It’s a bit strong, but it’s a crowd favorite!#line:bar21
+-> "No, just checking out the place."
+    <<playAudio "checking_out">>
+    Bartender: Have fun exploring! Let me know if you need anything.#line:bar22
+
+Bartender: Have a great time tonight! Cheers!#line:bar23s
+<<playAudio "cheers">>
+
+===
+
+title: RonaldGrumpDialogue
+---
+
+Ronald Grump: Ah, hello there! You’re standing in the presence of greatness. What can I do for you? #line:rg1
+
+-> "Who are you?"
+    Ronald Grump: Who am I? Really? I’m Ronald Grump, the greatest entrepreneur of all time!#line:rg2
+
+    Ronald Grump: I’ve built towers, businesses, and now... I’m here to help. What’s your dream? #line:rg3
+    -> "To become rich."
+        Ronald Grump: Ah, I like you already! Stick with me, and you’ll be swimming in gold! #line:rg4
+    -> "To live a peaceful life."
+        Ronald Grump: Peaceful? Hah! Peace is for retirees. You need ambition! #line:rg5
+    -> "To change the world."
+        Ronald Grump: Change the world? That’s cute. Let’s start with building a brand. #line:rg6
+
+-> "Why are you here?"
+    Ronald Grump: Why am I here? Because this club needs some... improvement. #line:rg7
+
+    Ronald Grump: Tell me, what’s the one thing you’d change about this place? #line:rg8
+    -> "The music is too loud."
+        Ronald Grump: Nonsense! Loud music shows power. You’ll thank me later. #line:rg9
+    -> "It needs more style."
+        Ronald Grump: Finally, someone with taste. I’ll have golden chandeliers installed. #line:rg10
+    -> "Nothing. It’s perfect!"
+        Ronald Grump: Perfect? Hah! Wait until I add my personal touch. Then it’ll shine! #line:rg11
+
+-> "What’s your opinion on the club?"
+    Ronald Grump: It’s alright. Could use more Grump branding, don’t you think? #line:rg12
+
+    Ronald Grump: Be honest, though. What’s your favorite part of the club? #line:rg13
+    -> "The dance floor."
+        Ronald Grump: Ah, yes, the dance floor. A place to celebrate success. Smart choice! #line:rg14
+    -> "The bar."
+        Ronald Grump: The bar! Great minds think alike. Business deals are born over drinks. #line:rg15
+    -> "The people."
+        Ronald Grump: The people? You’re too sentimental! But hey, whatever works for you. #line:rg16
+
+Ronald Grump: Well, it’s been delightful chatting with you. I’ll let you get back to your night. Cheers! #line:rg17
+
+===
