@@ -1,97 +1,46 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MultiAudioScratchingSlider : MonoBehaviour
+public class ScratchingEffectController : MonoBehaviour
 {
-    [Header("Audio Sources")]
-    public AudioSource[] audioSources; // Array of audio sources to control
-
-    [Header("UI Elements")]
-    public Slider scratchingSlider; // The slider for scratching back and forth
-
-    private bool isDragging = false; // Flag to check if the user is dragging the slider
+    public Slider scratchSlider; // The UI slider for scratching control
+    public List<AudioSource> audioSources; // List of audio sources to control scratching
 
     void Start()
     {
-        if (audioSources.Length == 0)
+        if (scratchSlider == null)
         {
-            Debug.LogError("No AudioSources assigned!");
+            Debug.LogError("ScratchSlider is not assigned.");
             return;
         }
 
-        if (scratchingSlider == null)
+        if (audioSources.Count == 0)
         {
-            Debug.LogError("ScratchingSlider is not assigned!");
+            Debug.LogWarning("No audio sources assigned.");
             return;
         }
 
-        // Assume all audio sources have the same clip length
-        AudioClip firstClip = audioSources[0].clip;
-        if (firstClip == null)
-        {
-            Debug.LogError("No audio clip found on the first audio source!");
-            return;
-        }
-
-        // Set up the slider values based on the audio clip length
-        scratchingSlider.minValue = 0;
-        scratchingSlider.maxValue = firstClip.length;
-        scratchingSlider.onValueChanged.AddListener(OnSliderValueChanged);
-
-        // Sync the slider's initial value with the first audio source's time
-        scratchingSlider.value = audioSources[0].time;
+        // Initialize the scratch slider
+        scratchSlider.minValue = 0f; // Start at the beginning
+        scratchSlider.maxValue = 1f; // End at the end
+        scratchSlider.onValueChanged.AddListener(UpdateScratching); // Add listener for scratching changes
     }
 
-    void Update()
+    private void UpdateScratching(float value)
     {
-        // If the user is not dragging the slider, sync its value with the first audio source's time
-        if (!isDragging && audioSources.Length > 0 && audioSources[0].isPlaying)
+        foreach (var audioSource in audioSources)
         {
-            scratchingSlider.value = audioSources[0].time;
-        }
-    }
-
-    // Called when the slider value changes
-    public void OnSliderValueChanged(float value)
-    {
-        if (isDragging)
-        {
-            foreach (var source in audioSources)
+            if (audioSource != null && audioSource.clip != null)
             {
-                if (source != null && source.clip != null)
-                {
-                    source.time = value; // Set the playback position for each audio source
-                }
+                // Calculate the playback position based on the slider value
+                float newPosition = value * audioSource.clip.length;
+                audioSource.time = newPosition; // Set the new playback position
+                Debug.Log($"Updated scratch position of {audioSource.name} to {newPosition}");
             }
-        }
-    }
-
-    // Called when the user starts dragging the slider
-    public void OnSliderDragStart()
-    {
-        isDragging = true;
-
-        // Pause all audio sources while dragging for smooth scratching
-        foreach (var source in audioSources)
-        {
-            if (source != null)
+            else
             {
-                source.Pause();
-            }
-        }
-    }
-
-    // Called when the user stops dragging the slider
-    public void OnSliderDragEnd()
-    {
-        isDragging = false;
-
-        // Resume playing all audio sources after dragging
-        foreach (var source in audioSources)
-        {
-            if (source != null)
-            {
-                source.Play();
+                Debug.LogWarning("Audio source is not assigned, is null, or does not have an audio clip.");
             }
         }
     }
