@@ -42,14 +42,11 @@ Welcome to the **Aloha Miami Nightclub VR** project repository! This immersive V
 * **Neon Aesthetics**: A visually stunning environment with a palette of blue, pink, and white.
 * **Interactive Areas**: Includes a dance floor, DJ booth, bar area, pool, and darts games.
 
-![Screenshot 2024-12-13 115106](https://github.com/user-attachments/assets/2bfa4636-c0a2-4c21-b867-a6b13bc18b13)
-
-
-![Screenshot 2024-12-13 115121](https://github.com/user-attachments/assets/ffed0ddc-8d97-4d19-ac80-a1fee8bccf0b)
-
-
-![Screenshot 2024-12-13 115200](https://github.com/user-attachments/assets/9c367828-25a1-4c87-bd68-2e2356a610e3)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2bfa4636-c0a2-4c21-b867-a6b13bc18b13" alt="Screenshot 1" width="400"/>
+  <img src="https://github.com/user-attachments/assets/ffed0ddc-8d97-4d19-ac80-a1fee8bccf0b" alt="Screenshot 2" width="400"/>
+  <img src="https://github.com/user-attachments/assets/9c367828-25a1-4c87-bd68-2e2356a610e3" alt="Screenshot 3" width="400"/>
+</p>
 
 
 ### 🤖 AI Integration
