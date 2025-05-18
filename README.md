@@ -2,7 +2,7 @@
 
 Welcome to the **Aloha Miami Nightclub VR** project repository! This immersive VR experience lets users step into a vibrant, neon-lit nightclub, interact with NPCs, and control a dynamic DJ setup. The project leverages AI-powered features, interactive mechanics, and visually stunning environments to deliver an unforgettable journey into the heart of Miami nightlife.
 
-![Screenshot 2024-12-13 114232](https://github.com/user-attachments/assets/bb23abbd-e842-4c65-9e0f-6b219cfe337f)
+<img src="https://github.com/user-attachments/assets/bb23abbd-e842-4c65-9e0f-6b219cfe337f" alt="Screenshot 4" width="400"/>
 
 
 ---
@@ -15,11 +15,9 @@ Welcome to the **Aloha Miami Nightclub VR** project repository! This immersive V
 * **Runtime Slider**: Scratch and navigate tracks seamlessly.
 * **Special Effects**: Toggle fog machines, strobe lights, and fireworks to enhance the party vibe.
 
-![Screenshot 2025-05-18 133933](https://github.com/user-attachments/assets/00264fc5-420e-4a27-8c49-e9230df5c058)
+<img src="https://github.com/user-attachments/assets/00264fc5-420e-4a27-8c49-e9230df5c058" alt="Screenshot 4" width="400"/>
 
-
-![Screenshot 2024-12-13 124823](https://github.com/user-attachments/assets/b90243e6-983a-4017-a704-f8dd50f020a4)
-
+<img src="https://github.com/user-attachments/assets/b90243e6-983a-4017-a704-f8dd50f020a4" alt="Screenshot 4" width="400"/>
 
 ### 🕺 Immersive NPC Interactions
 
